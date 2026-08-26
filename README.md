@@ -1,1 +1,1 @@
-Das wär mini Code für de Inofrmatik Bullet Time - Verbindig vo alli Handys zumene zentrali Schnittstell 
+Das wär mini Code für de Informatik Bullet Time - Verbindig vo alli Handys zumene zentrali Schnittstell.
