@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>Phone Camera Dashboard</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .qr {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .qr img {
+            width: 280px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background: #eee;
+        }
+
+        input {
+            padding: 6px;
+        }
+
+        button {
+            padding: 6px 12px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>Phone Camera Dashboard</h1>
+
+        <p>
+            Scan this QR code to register a new phone.
+        </p>
+
+    </div>
+
+
+    <div class="qr">
+
+        <img
+            src="data:image/png;base64,{{ qr_image }}"
+        >
+
+        <p>
+            {{ register_url }}
+        </p>
+
+    </div>
+
+
+    <h2>
+        Registered Phones
+    </h2>
+
+
+    <table>
+
+        <tr>
+
+            <th>
+                Name
+            </th>
+
+            <th>
+                Device ID
+            </th>
+
+            <th>
+                Registered
+            </th>
+
+            <th>
+                Last Upload
+            </th>
+
+            <th>
+                Rename
+            </th>
+
+        </tr>
+
+
+        {% for device_id, device in devices.items() %}
+
+        <tr>
+
+            <td>
+                {{ device.name }}
+            </td>
+
+            <td>
+                {{ device_id }}
+            </td>
+
+            <td>
+                {{ device.registered_at }}
+            </td>
+
+            <td>
+
+                {% if device.last_upload %}
+
+                    {{ device.last_upload }}
+
+                {% else %}
+
+                    No photo yet
+
+                {% endif %}
+
+            </td>
+
+            <td>
+
+                <form
+                    action="/rename/{{ device_id }}"
+                    method="POST"
+                >
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Phone name"
+                    >
+
+                    <button type="submit">
+                        Rename
+                    </button>
+
+                </form>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+</body>
+</html>

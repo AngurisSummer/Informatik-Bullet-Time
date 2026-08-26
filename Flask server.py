@@ -14,13 +14,18 @@ videos = {
 }
 
 #creating class for individual video
-
 class Video(Resource): #class video will extend from a resource (part of flask-restful already)
     #we define the methods for get, post, put and delete in this class
     def get(self, video_id): #parameter video_id
         if video_id == "all":
             return videos
         return videos[video_id], 201
+
+    def post(self, video_id):
+        args = parser.parse_args()
+        new_video = {"title": args["title"]}
+        videos[video_id] = new_video
+        return {video_id: videos[video_id]}, 201
 
     def put(self, video_id):
         args = parser.parse_args()

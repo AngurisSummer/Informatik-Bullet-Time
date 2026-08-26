@@ -1,0 +1,67 @@
+{
+    "1739c12f": {
+        "name": "Test Phone 1",
+        "registered_at": "2026-08-18 19:54:30",
+        "last_upload": "2026-08-18 19:54:46"
+    },
+    "761f8465": {
+        "name": "Test Phone 2",
+        "registered_at": "2026-08-18 19:57:37",
+        "last_upload": null
+    },
+    "11c77bed": {
+        "name": "Test Phone 3",
+        "registered_at": "2026-08-18 19:59:45",
+        "last_upload": "2026-08-18 20:00:21"
+    },
+    "cc20380f": {
+        "name": "Test Phone 4",
+        "registered_at": "2026-08-18 20:00:21",
+        "last_upload": null
+    },
+    "b1f4ea97": {
+        "name": "Test Phone 5",
+        "registered_at": "2026-08-18 20:12:19",
+        "last_upload": "2026-08-18 20:13:00"
+    },
+    "0fadfa6d": {
+        "name": "Test Phone 6",
+        "registered_at": "2026-08-20 11:09:14",
+        "last_upload": "2026-08-20 11:09:42"
+    },
+    "021ae88e": {
+        "name": "Test Phone 7",
+        "registered_at": "2026-08-20 11:09:14",
+        "last_upload": null
+    },
+    "1018bb90": {
+        "name": "Test Phone 8",
+        "registered_at": "2026-08-20 11:43:21",
+        "last_upload": null
+    },
+    "844c8193": {
+        "name": "Phone 9",
+        "registered_at": "2026-08-20 11:52:59",
+        "last_upload": null
+    },
+    "8fba1ab5": {
+        "name": "Phone 10",
+        "registered_at": "2026-08-20 11:53:01",
+        "last_upload": "2026-08-20 11:53:30"
+    },
+    "cf2d4c8d": {
+        "name": "Matthis",
+        "registered_at": "2026-08-20 11:53:02",
+        "last_upload": "2026-08-20 11:53:25"
+    },
+    "a9ee9cdf": {
+        "name": "Phone 12",
+        "registered_at": "2026-08-20 11:53:17",
+        "last_upload": "2026-08-20 11:53:34"
+    },
+    "4f9b5f25": {
+        "name": "Phone 13",
+        "registered_at": "2026-08-20 12:02:52",
+        "last_upload": "2026-08-20 12:03:34"
+    }
+}

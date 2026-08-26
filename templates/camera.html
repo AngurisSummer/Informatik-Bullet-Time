@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Phone Camera</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <style>
+
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .device {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .success {
+            color: green;
+            font-size: 18px;
+            margin: 20px;
+        }
+
+        input {
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <h1>
+        {{ device_name }}
+    </h1>
+
+
+    <div class="device">
+
+        Device ID:
+
+        <strong>
+            {{ device_id }}
+        </strong>
+
+    </div>
+
+
+    {% if message %}
+
+        <div class="success">
+            {{ message }}
+        </div>
+
+    {% endif %}
+
+
+    <form
+
+        action="/upload/{{ device_id }}"
+
+        method="POST"
+
+        enctype="multipart/form-data"
+
+    >
+
+        <input
+
+            type="file"
+
+            name="image"
+
+            accept="image/*"
+
+            capture="environment"
+
+            required
+
+        >
+
+        <br>
+
+        <button type="submit">
+            Take / Send Photo
+        </button>
+
+    </form>
+
+
+</body>
+
+</html>
